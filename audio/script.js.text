@@ -1,0 +1,27 @@
+$(function(){
+	
+	current = 0;
+	var songs = [
+		'gitara.mp3',
+		'harana.mp3',
+		'horse.mp3'
+	]
+	
+	var song = $('#my-audio')[0];
+	song.src = songs[current];
+	song.play();
+	
+	$('#title').text(songs[current]);
+	
+	$('body').on('click','#next',function(){
+		song.pause();
+		song.currentTime = 0;
+		
+		current = (current < songs.length) ? current + 1 : 0;
+		song.src = songs[current];
+		song.play(); 
+		
+		$('#title').text(songs[current]);
+	})
+    
+});

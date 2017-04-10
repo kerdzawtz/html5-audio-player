@@ -1,0 +1,16 @@
+<html>
+	<head>
+	</head>
+	<body>
+	<audio id="my-audio">
+        <source src="horse.mp3" type="audio/mpeg" id="my-audio-track"/>
+	</audio>
+	<h1>
+		<span>Now Playing: </span>
+		<span id="title"></span>
+	</h1>
+	<a href="#" id="next">Next</a>
+	<script src="jquery-1.11.2.min.js"></script>
+	<script src="script.js"></script>
+	</body>
+</html>
